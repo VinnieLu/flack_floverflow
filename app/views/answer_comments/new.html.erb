@@ -1,0 +1,34 @@
+<h1>New Answer Comment</h1>
+
+<%= form_with model: [@answer, @answer_comment], local: true do |form| %>
+	
+	<% if @answer_comment.errors.any? %>
+		<div id="error_explanation">
+			<h2>
+				<%= pluralize(@answer_comment.errors.count, "error") %>
+					prohibitied this answerComment from being saved:
+			</h2>
+			<ul>
+				<% @answer_comment.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<p>
+		<%= form.label :comment %>
+		<%= form.text_field :comment %>
+	</p>
+
+	<p>
+		<%= form.label :user_id %>
+		<%= form.text_field :user_id %>
+	</p>
+
+	<p>
+		<%= form.submit %>
+	</p>
+
+<% end %>
+

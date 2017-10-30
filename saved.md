@@ -1,0 +1,1 @@
+<td><%= link_to ">", question_question_vote_path(question_id: question.id), method: :delete %></td>

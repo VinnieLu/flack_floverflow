@@ -1,0 +1,21 @@
+<%= link_to "New Question", new_question_path %>
+
+<table>
+	<tr>
+		<th>Question</th>
+		<th>User</th>
+	</tr>
+
+	<% @questions.each do |question| %>
+		<tr>
+			
+			<td><%= link_to "<", question_question_votes_path(question_id: question.id), method: :post %>
+			</td>
+			<td><%= question.question_votes.count %></td>
+			<td><%= link_to ">", question_question_vote_path(question_id: question.id, id: 1), method: :DELETE %></td>
+			<td><%= question.question  %></td>
+			<td><%= question.user.email %></td>
+			<td><%= link_to "Show", question_path(question) %></td>
+		</tr>
+	<% end %>
+</table>
