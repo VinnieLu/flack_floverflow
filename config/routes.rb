@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+	get "users/login"
+	post "users/profile"
+
+	resources :users
 
 	resources :questions do
 		resources :question_comments

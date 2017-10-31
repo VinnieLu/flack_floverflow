@@ -14,10 +14,10 @@
  *= require_self
  */
 
-body {
+/*body {
  	background: linear-gradient(red, yellow, purple, blue, green, orange);
  	color: #d5ddea;
- 	/*background-image: asset-data-url("unicorn.jpeg")*/
- }
+ 	background-image: asset-data-url("unicorn.jpeg")
+ }*/
 
 
