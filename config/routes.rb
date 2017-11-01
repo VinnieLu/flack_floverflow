@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-	get "users/login"
-	post "users/profile"
+	get "/users/login", controller: "users", action: "login"
+	post "/users/profile", controller: "users", action: "profile" 
+	# get "/users/new", controller: "users", action: "new", as: "new_user"
+	# get "/users", controller: "users", action: "index"
+	# post "/users", controller: "users", action: "create"
+	# get "/users/:id/edit", controller: "users", action: "edit"
+	# patch "/users/:id", controller: "users", action: "update"
+	# put "/users/:id", controller: "users", action: "update"
+	# delete "/users/:id", controller: "users", action: "destroy"
 
 	resources :users
 
